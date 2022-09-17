@@ -1,8 +1,8 @@
-export const User = () => {
+export const User = (props) => {
     return (
         <div>
-            <h1>Name : Nanny</h1>
-            <p>Web developer</p>
+            <h1>{props.name}</h1>
+            <p>{props.position}</p>
         </div>
     )
 }
