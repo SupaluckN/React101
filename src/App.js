@@ -4,10 +4,16 @@ import {User} from './User.js'
 
 function App() {
 
+  const users = [
+    {name:"Nanny",position:"Web developer"},
+    {name:"Mike",position:"Mike"},
+  ];
+  
   return (
     <div className="App">
-      <User name="Nanny" position="Web developer" />
-      <User name="Mike" position="Manager" />
+      {users.map((user,key) => {
+        return <User name={user.name} position={user.position} key={key} />
+      })}
     </div>
   );
 }

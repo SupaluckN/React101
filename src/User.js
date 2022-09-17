@@ -2,7 +2,7 @@ export const User = (props) => {
     return (
         <div>
             <h1>{props.name}</h1>
-            <p>{props.position}</p>
+            <p style={{color: "blue"}}>{props.position}</p>
         </div>
     )
 }
