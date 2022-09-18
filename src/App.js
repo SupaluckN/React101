@@ -4,17 +4,16 @@ import { useState } from 'react'
 
 function App() {
 
-  const [inputValue, setInputValue] = useState("");
+  const [showText, setShowText] = useState(true);
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value)
-    console.log(event.target.value);
-  };
+  const toggleText = () => {
+    setShowText(!showText)
+  }
 
   return (
     <div className="App">
-      <input type="text" onChange={handleInputChange} />
-      {inputValue}
+      <button onClick={toggleText}>Show/Hide</button>
+      {showText === true && <h1>Hi my name is Nanny</h1>}
     </div>
   );
 }
